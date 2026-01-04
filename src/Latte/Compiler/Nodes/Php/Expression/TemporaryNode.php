@@ -33,6 +33,6 @@ class TemporaryNode extends ExpressionNode
 
 	public function &getIterator(): \Generator
 	{
-		yield;
+		false && yield;
 	}
 }
