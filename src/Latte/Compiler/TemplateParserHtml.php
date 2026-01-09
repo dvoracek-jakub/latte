@@ -30,7 +30,7 @@ final class TemplateParserHtml
 	private ?Html\ElementNode $element = null;
 	private readonly TemplateParser $parser;
 
-	/** @var array{string, ?Nodes\Php\ExpressionNode} */
+	/** @var array{string, ?Nodes\Php\ExpressionNode}|null */
 	private ?array $endName = null;
 
 	/** @var \WeakMap<Html\ElementNode, object{tag: mixed, textualName: string, unclosedTags?: array<string>}> */

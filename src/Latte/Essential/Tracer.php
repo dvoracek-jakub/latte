@@ -40,6 +40,10 @@ final class Tracer
 	}
 
 
+	/**
+	 * @param  array<array{file?: string, line?: int, function?: string, object?: object, args?: mixed[]}>  $trace
+	 * @return array<array{function: string, file: string, line: int, args: mixed[]}>
+	 */
 	private static function generateTrace(array $trace): array
 	{
 		$res = [];

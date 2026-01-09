@@ -15,6 +15,6 @@ final class Block
 {
 	public ?string $contentType = null;
 
-	/** @var callable[] */
+	/** @var \Closure[] */
 	public array $functions = [];
 }

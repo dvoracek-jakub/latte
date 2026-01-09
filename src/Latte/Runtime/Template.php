@@ -305,7 +305,7 @@ class Template
 
 	/**
 	 * Creates block if doesn't exist and checks if content type is the same.
-	 * @param  callable[]  $functions
+	 * @param  \Closure[]  $functions
 	 * @internal
 	 */
 	protected function addBlock(

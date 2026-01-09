@@ -124,6 +124,7 @@ final class TagParser
 
 	/**
 	 * Parses variables used in foreach.
+	 * @return array{?Nodes\Php\ExpressionNode, Nodes\Php\ExpressionNode|Nodes\Php\ListNode, bool}
 	 * @internal
 	 */
 	public function parseForeach(): array

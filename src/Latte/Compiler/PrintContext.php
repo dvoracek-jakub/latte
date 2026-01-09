@@ -22,7 +22,10 @@ use function addcslashes, array_map, array_pop, end, implode, preg_replace, preg
  */
 final class PrintContext
 {
+	/** @var string[] */
 	public array $paramsExtraction = [];
+
+	/** @var array<string, Block> */
 	public array $blocks = [];
 	private int $counter = 0;
 
@@ -189,6 +192,7 @@ final class PrintContext
 
 	/**
 	 * Prints an array of nodes and implodes the printed values with $glue
+	 * @param  (?Node)[]  $nodes
 	 */
 	public function implode(array $nodes, string $glue = ', '): string
 	{

@@ -279,6 +279,7 @@ final class TemplateParser
 	}
 
 
+	/** @return Token[] */
 	public function consumeTag(): array
 	{
 		$res = [];

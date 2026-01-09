@@ -149,6 +149,7 @@ final class Filters
 
 	/**
 	 * Splits a string by a string.
+	 * @return string[]
 	 */
 	public static function explode(string $value, string $separator = ''): array
 	{
@@ -491,6 +492,8 @@ final class Filters
 
 	/**
 	 * Reverses string or array.
+	 * @param  iterable<mixed>  $val
+	 * @return ($val is string ? string : array<mixed>)
 	 */
 	public static function reverse(string|iterable $val, bool $preserveKeys = false): string|array
 	{
@@ -506,6 +509,8 @@ final class Filters
 
 	/**
 	 * Chunks items by returning an array of arrays with the given number of items.
+	 * @param  iterable<mixed>  $list
+	 * @return \Generator<int, array<mixed>>
 	 */
 	public static function batch(iterable $list, int $length, $rest = null): \Generator
 	{
@@ -535,6 +540,9 @@ final class Filters
 	 * @template K
 	 * @template V
 	 * @param  iterable<K, V>  $data
+	 * @param  (\Closure(mixed, mixed): int)|null  $comparison
+	 * @param  string|int|(\Closure(mixed): mixed)|null  $by
+	 * @param  string|int|(\Closure(mixed): mixed)|bool  $byKey
 	 * @return iterable<K, V>
 	 */
 	public function sort(
@@ -587,6 +595,7 @@ final class Filters
 	 * @template K
 	 * @template V
 	 * @param  iterable<K, V>  $data
+	 * @param  string|int|(\Closure(mixed, int|string): mixed)  $by
 	 * @return iterable<iterable<K, V>>
 	 */
 	public static function group(iterable $data, string|int|\Closure $by): iterable
